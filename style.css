@@ -25,7 +25,7 @@ header h1 {
     display: none;
 }
 
-.set>button{
+.set>button {
     background: transparent;
     border: none;
     font-size: 30px;
@@ -51,7 +51,7 @@ header>div a {
     font-weight: bold;
     font-size: 18px;
     position: relative;
-    
+
 }
 
 header>div a::before {
@@ -300,6 +300,7 @@ header>div a:hover::before {
 
 .cards>div {
     width: 200px;
+    height: 250px;
     box-shadow: 1px 1px 30px rgba(128, 128, 128, 0.342);
     padding: 20px;
     border-radius: 30px;
@@ -307,6 +308,7 @@ header>div a:hover::before {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    position: relative;
 }
 
 .cards>div h3 {
@@ -391,7 +393,9 @@ header>div a:hover::before {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
     overflow: hidden;
 
 }
@@ -536,13 +540,15 @@ header>div a:hover::before {
     height: 460px;
     padding-bottom: 30px;
     flex: 0 0 auto;
+    position: relative;
     /* يخلي عرضه ثابت وماينزلش */
     /* عرض ثابت */
 
 }
 
-.parent4>div{
-    flex: 0 0 auto;  /* يخلي عرضه ثابت وماينزلش */
+.parent4>div {
+    flex: 0 0 auto;
+    /* يخلي عرضه ثابت وماينزلش */
 }
 
 .parent4>:nth-child(1) {
@@ -560,7 +566,7 @@ header>div a:hover::before {
 
 .card3 {
     display: grid;
-    gap: 20px;
+    gap: 15px;
     grid-template-columns: repeat(2, 50%);
     padding: 25px 50px;
     margin-top: 30px;
@@ -587,7 +593,7 @@ header>div a:hover::before {
     box-shadow: 1px 1px 30px 1px #3b018865;
     background-color: rgba(220, 220, 220, 0.418);
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -628,10 +634,12 @@ header>div a:hover::before {
 
 
 .card3-2 {
-    background-color: #3c0188;
     padding: 15px;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
 }
 
@@ -970,7 +978,8 @@ input:hover {
     }
 
     header>div a {
-        display: none; /* اخفي الروابط */
+        display: none;
+        /* اخفي الروابط */
         flex-direction: column;
         background: #fff;
         position: absolute;
@@ -988,8 +997,8 @@ input:hover {
         right: 0;
     }
 
-    
-    
+
+
 
     .parent1 {
         flex-direction: column;
@@ -1017,7 +1026,7 @@ input:hover {
     }
 
     .card {
-        grid-template-columns: repeat(2, 45%);
+        grid-template-columns: repeat(1, 90%);
         padding: 10px;
         justify-content: space-around;
     }
@@ -1047,12 +1056,15 @@ input:hover {
         margin-left: 0;
     }
 
-    .card3 {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 50%);
-        padding: 25px 50px;
+    .parent4{
+        height: fit-content;
+    }
 
+    .card3 {
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+        margin-bottom: 10px;
     }
 
     .cards>div {
@@ -1061,7 +1073,7 @@ input:hover {
 
 
 
-    
+
 
     .footer {
         grid-template-columns: 100%;
